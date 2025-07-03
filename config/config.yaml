@@ -1,0 +1,6 @@
+#parser config
+rss_url: "https://habr.com/ru/rss/articles/?fl=ru"
+interval: "15m"
+db_dsn: "postgres://user:pass@localhost:5432/habr?sslmode=disable"
+es_host: "http://localhost:9200"
+log_level: "info"
