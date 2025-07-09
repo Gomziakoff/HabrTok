@@ -1,13 +1,17 @@
 package config
 
-import "github.com/spf13/viper"
+import (
+	"time"
+
+	"github.com/spf13/viper"
+)
 
 type ParserConfig struct {
-	RssUrl   string `mapstructure:"rss_url"`
-	Interval string `mapstructure:"interval"`
-	DbDsn    string `mapstructure:"db_dsn"`
-	EsHost   string `mapstructure:"es_host"`
-	LogLevel string `mapstructure:"log_level"`
+	RSSUrl   string        `mapstructure:"rss_url"`
+	Interval time.Duration `mapstructure:"interval"`
+	DbDsn    string        `mapstructure:"db_dsn"`
+	EsHost   string        `mapstructure:"es_host"`
+	LogLevel string        `mapstructure:"log_level"`
 }
 
 func LoadConfig() (*ParserConfig, error) {
